@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 def lotto_ziehung():
     lotto_zahlen = [i+1 for i in range(45)]
     ziehung = list()
-
+    
     for i in range(6):
-        random_number = lotto_zahlen[random.randint(0, 44)]
+        random_number = lotto_zahlen[random.randint(0, 44-i)]
         ziehung.append(random_number)
         lotto_zahlen[random_number - 1], lotto_zahlen[-1 - i] = lotto_zahlen[-1 - i], lotto_zahlen[random_number - 1]
     return ziehung
