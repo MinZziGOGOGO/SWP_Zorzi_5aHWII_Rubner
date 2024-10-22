@@ -13,7 +13,8 @@ def lotto_ziehung():
 
 def  lottoziehung_statistik():
     my_dictionary = {i: 0 for i in range(45)}
-    for i in range(1000):
+    prozentzahl = 0
+    for i in range(10000):
         jetzige_zahlen = lotto_ziehung()
         for j in jetzige_zahlen:
             my_dictionary[j - 1] += 1
